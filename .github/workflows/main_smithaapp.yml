@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'smithaapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B3BF0464FA9B476B8FC6BC2AC1C025E5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_434C54A8A0124364B61A9A0EDD39F03C }}
           package: .
