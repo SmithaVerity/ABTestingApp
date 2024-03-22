@@ -293,19 +293,28 @@
     </footer>
 </div>
 
-<script src="js/script.js"></script>
-    <script type="module">
-  const gb = new GrowthBook({
-  apiHost: "https://cdn.growthbook.io",
-  clientKey: "sdk-aooSXz7pCVVgyFKF",
-  trackingCallback: (experiment, result) => {
-    // Example using Segment
-    analytics.track("Experiment Viewed", {
-      experimentId: experiment.key,
-      variationId: result.key,
-    });
-  },
-});
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD_zHd6z4k-xV0ZXSO0fNrNCrCknVyovRc",
+    authDomain: "smithatest1-9eb8a.firebaseapp.com",
+    projectId: "smithatest1-9eb8a",
+    storageBucket: "smithatest1-9eb8a.appspot.com",
+    messagingSenderId: "201763092762",
+    appId: "1:201763092762:web:031986124d0f60b67414a3",
+    measurementId: "G-3KWGJZ536L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
 </body>
 </html>
